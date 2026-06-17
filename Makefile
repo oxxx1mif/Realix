@@ -59,3 +59,6 @@ always:
 # Очистка
 clean:
 	rm -rf $(BUILD_DIR)/*
+
+format:
+	find . -regex '.*\.\(c\|h\|cc\|cpp\|hpp\|ino\)' -exec clang-format -i -style=file {} +
